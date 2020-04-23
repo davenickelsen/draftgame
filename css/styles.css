@@ -1,0 +1,18 @@
+li {
+    display: flex;
+    flex-direction: row;
+    padding: 4px 4px 4px; 4px;
+}
+.player {
+    min-width: 300px;
+}
+
+.position {
+    width: 60px;
+    padding-right: 4px;
+    text-align: center;
+}
+
+.header {
+    font-weight: bold;
+}

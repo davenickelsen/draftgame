@@ -1,0 +1,22 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
+
+</head>
+<body>
+<h2><%="NFL Draft Predictions - All Users" %></h2>
+<% model.each do |m| %>
+  <h3><%= m[:user] %></h3>
+  <div class="user">
+    <ul id="players">
+      <li><div class="position header">Pick #</div><div class="player header">Player</div></li>
+      <% for i in 1..11 do %>
+        <li><div class="position"><%= i %></div><div><%=m[:picks][i] %></div></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+</body>
+</html>
