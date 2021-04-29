@@ -3,7 +3,7 @@ function Player(p){
     this.Position = p.Position;
     this.Class = p.Class;
     this.School = p.School;
-    this.Description = p.Name + " - " + p.Position + " - " + p.Class + " - " + p.School;
+    this.Description = p.Name + " - " + p.Position + " - " + p.School;
 };
 
 function findPlayer(player, models){
@@ -21,14 +21,14 @@ var model = {
     players: playerModels,
     caption: "Choose..."
 };
-for (var i = 0; i < 11; i++){
+for (var i = 0; i < 10; i++){
     model['pick' + (i + 1)] = ko.observable(findPlayer(picks[i], playerModels));
 }
 ko.applyBindings(model, document.getElementById("players"));
 
 function resolvePicks(){
     var selections = [];
-    for (var i = 1; i < 12; i++){
+    for (var i = 1; i < 11; i++){
         var selection = model['pick' + i]() || {"Description": null};
         selections.push(selection.Description);
     }

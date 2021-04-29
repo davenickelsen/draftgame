@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/base'
+require 'fig_newton'
 require_relative 'html_resolver'
 require_relative 'time_checker'
 require_relative 'user_resolver'
@@ -13,9 +14,7 @@ class App < Sinatra::Application
 
   def show_all_picks
     keys = UserResolver.all_keys
-    puts keys
     model = PickReader.get_all_picks(keys)
-    puts model
     model.each do |item|
       item[:user] = UserResolver.get_user(item[:key])
     end
@@ -63,4 +62,6 @@ class App < Sinatra::Application
 
 end
 
+year = Date.today.year
+FigNewton.load("#{year}.yml")
 App.run!

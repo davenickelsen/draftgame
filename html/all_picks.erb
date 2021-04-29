@@ -12,8 +12,8 @@
   <div class="user">
     <ul id="players">
       <li><div class="position header">Pick #</div><div class="player header">Player</div></li>
-      <% for i in 1..11 do %>
-        <li><div class="position"><%= i %></div><div><%=m[:picks][i] %></div></li>
+      <% for i in 1..10 do %>
+        <li><div class="position"><%= i %></div><div><%=m[:picks][i-1] %></div></li>
       <% end %>
     </ul>
   </div>
