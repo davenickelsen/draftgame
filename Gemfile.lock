@@ -3,9 +3,11 @@ GEM
   specs:
     fig_newton (1.0)
       yml_reader (>= 0.7)
+    httpclient (2.8.3)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
-    rack (2.2.2)
+    openssl (3.1.0)
+    rack (2.2.6.4)
     rack-protection (2.0.8.1)
       rack
     ruby2_keywords (0.0.2)
@@ -19,9 +21,12 @@ GEM
 
 PLATFORMS
   x64-mingw32
+  x86_64-linux
 
 DEPENDENCIES
   fig_newton
+  httpclient
+  openssl
   sinatra
 
 BUNDLED WITH
