@@ -1,7 +1,7 @@
 class UserResolver
 
   def self.hash
-    {'053116' => 'Dave', '122128' => 'Meat', '060752' => 'Steve', '121746' => 'George'}
+    {'053116' => 'Dave', '122128' => 'Meat', '060752' => 'Steve', '121746' => 'George', '102183' => 'Twitch'}
   end
 
   def self.get_user(key)
